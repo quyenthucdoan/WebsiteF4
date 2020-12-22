@@ -138,14 +138,14 @@ h3{
    height:100%;
 }
 .product-grid3 .product-image3{
-   position:relative
+   
 }
 .product-grid3 .product-image3 a{
    display:block
 }
 .product-grid3 .product-image3 img{
    width:100%;
-   height:auto
+   height:100%
 }
 .product-grid3 .pic-1{
    opacity:1;

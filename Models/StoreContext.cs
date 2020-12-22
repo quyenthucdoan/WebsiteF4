@@ -9,27 +9,129 @@ namespace WebsiteF4.Models
 {
     public class StoreContext
     {
-        static string connectionString = @"Data Source = localhost; Initial Catalog = F4RESTAURANT; Integrated Security = True";
+        //luon luon co
+        static string conString = @"Data Source=localhost;Initial Catalog=F4RESTAURANT;Integrated Security=True";
 
-        /*private SqlConnection GetConnection()
-        {
-            return SqlConnection(connectionString);
-        } */
 
-        public List<Menu> selectMenu()
+        //Show MENU_Hamburger
+        public List<Menu> selectMenu_Hamburger()
         {
             List<Menu> list = new List<Menu>();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "Select * from MENU";
+                cmd.CommandText = "Select * from MENU where CATE_ID = 1";
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    list.Add(new Menu(dr.GetInt32(0), dr.GetString(1), dr.GetInt32(2), dr.GetDecimal(3).ToString()));
+                    list.Add(new Menu()
+                    {
+                        MENU_ID = dr["MENU_ID"].ToString(),
+                        MENU_NAME = dr["MENU_NAME"].ToString(),
+                        MENU_PRICE = dr["MENU_PRICE"].ToString(),
+                        CALORIES = dr["CALORIES"].ToString(),
+                        MENU_IMG = dr["MENU_IMG"].ToString(),
+                        MENU_DESCRIPTION = dr["MENU_DESCRIPTION"].ToString(),
+                        MARK = dr["MARK"].ToString(),
+                        CATE_ID = dr["CATE_ID"].ToString()
+                    }) ;
+                }
+
+            }
+            return list;
+        }
+
+
+        //Show Menu_IceCream
+        public List<Menu> selectMenu_IceCream()
+        {
+            List<Menu> list = new List<Menu>();
+
+            using (SqlConnection conn = new SqlConnection(conString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = $"Select * from MENU where CATE_ID = 2";
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    list.Add(new Menu()
+                    {
+                        MENU_ID = dr["MENU_ID"].ToString(),
+                        MENU_NAME = dr["MENU_NAME"].ToString(),
+                        MENU_PRICE = dr["MENU_PRICE"].ToString(),
+                        CALORIES = dr["CALORIES"].ToString(),
+                        MENU_IMG = dr["MENU_IMG"].ToString(),
+                        MENU_DESCRIPTION = dr["MENU_DESCRIPTION"].ToString(),
+                        MARK = dr["MARK"].ToString(),
+                        CATE_ID = dr["CATE_ID"].ToString()
+                    });
+                }
+
+            }
+            return list;
+        }
+
+        //Show Menu_Rice
+        public List<Menu> selectMenu_Rice()
+        {
+            List<Menu> list = new List<Menu>();
+
+            using (SqlConnection conn = new SqlConnection(conString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = $"Select * from MENU where CATE_ID = 3";
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    list.Add(new Menu()
+                    {
+                        MENU_ID = dr["MENU_ID"].ToString(),
+                        MENU_NAME = dr["MENU_NAME"].ToString(),
+                        MENU_PRICE = dr["MENU_PRICE"].ToString(),
+                        CALORIES = dr["CALORIES"].ToString(),
+                        MENU_IMG = dr["MENU_IMG"].ToString(),
+                        MENU_DESCRIPTION = dr["MENU_DESCRIPTION"].ToString(),
+                        MARK = dr["MARK"].ToString(),
+                        CATE_ID = dr["CATE_ID"].ToString()
+                    });
+                }
+
+            }
+            return list;
+        }
+
+        //Show Nuoc Giai Khat
+        public List<Menu> selectMenu_Soda()
+        {
+            List<Menu> list = new List<Menu>();
+
+            using (SqlConnection conn = new SqlConnection(conString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = $"Select * from MENU where CATE_ID = 4";
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    list.Add(new Menu()
+                    {
+                        MENU_ID = dr["MENU_ID"].ToString(),
+                        MENU_NAME = dr["MENU_NAME"].ToString(),
+                        MENU_PRICE = dr["MENU_PRICE"].ToString(),
+                        CALORIES = dr["CALORIES"].ToString(),
+                        MENU_IMG = dr["MENU_IMG"].ToString(),
+                        MENU_DESCRIPTION = dr["MENU_DESCRIPTION"].ToString(),
+                        MARK = dr["MARK"].ToString(),
+                        CATE_ID = dr["CATE_ID"].ToString()
+                    });
                 }
 
             }

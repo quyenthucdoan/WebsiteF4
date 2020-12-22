@@ -4,20 +4,43 @@
 
 @model IEnumerable<WebsiteF4.Models.Menu>
 
-<table>
+<h2>MENU</h2>
+<table border="1">
     <tr>
-        <td>id</td>
-        <td>id</td>
-        <td>id</td>
-        <td>id</td>
+        <th>Mã </th>
+        <th>Tên </th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Calo</th>
+        <th>IMG</th>
+        <th>Description</th>
+        <th>MARK</th>
+        <th>Cate_ID</th>
     </tr>
-    @foreach(var item in Model)
+
+    @foreach (var item in Model)
     {
         <tr>
-            <td>@item.MENU_ID</td>
+            <td>
+                @item.MENU_ID</td>
+
             <td>@item.MENU_NAME</td>
+
             <td>@item.MENU_SIZE</td>
+
             <td>@item.MENU_PRICE</td>
+
+            <td>@item.CALORIES</td>
+
+            <td>@item.MENU_IMG</td>
+
+            <td>@item.MENU_DESCRIPTION</td>
+
+            <td>@item.MARK</td>
+
+            <td>@item.CATE_ID</td>
         </tr>
+
     }
 </table>
+

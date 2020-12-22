@@ -1,6 +1,9 @@
 ﻿@{
     Layout = "_Layout";
 }
+
+@model IEnumerable<WebsiteF4.Models.Menu>
+
 <link rel="stylesheet" href="css.css"
 <!-- Thanh tìm kiếm -->
 <div class="container h-100 ">
@@ -19,16 +22,16 @@
         <div class="col-xs-12 ">
             <nav>
                 <div class="nav nav-tabs nav-fill " id="nav-tab " role="tablist ">
-                    <a class="nav-item nav-link active " id="nav-home-tab " data-bs-toggle="tab " href="#nav-mon-1 " role="tab " aria-controls="nav-home " aria-selected="true ">
+                    <a class="nav-item nav-link active " id="nav-home-tab " data-bs-toggle="tab " href="/Menu/Menu_Hamburger " role="tab " aria-controls="nav-home " aria-selected="true ">
                         <div><img src="~/content/icon/006-fast food.png" alt=" " class=" " height="50 " height="50 "></div>
                     </a>
-                    <a class="nav-item nav-link " id="nav-profile-tab " data-bs-toggle="tab " href="#nav-mon-2 " role="tab " aria-controls="nav-profile " aria-selected="false ">
+                    <a class="nav-item nav-link " id="nav-profile-tab " data-bs-toggle="tab " href="/Menu/Menu_IceCream " role="tab " aria-controls="nav-profile " aria-selected="false ">
                         <div><img src="~/content/icon/007-ice cream.png " alt=" " height="50 " height="50 "></div>
                     </a>
-                    <a class="nav-item nav-link " id="nav-contact-tab " data-bs-toggle="tab " href="#nav-mon-3 " role="tab " aria-controls="nav-contact " aria-selected="false ">
+                    <a class="nav-item nav-link " id="nav-contact-tab " data-bs-toggle="tab " href="/Menu/Menu_Rice" role="tab " aria-controls="nav-contact " aria-selected="false ">
                         <div><img src="~/content/icon/011-rice.png " alt=" " height="50 " height="50 "></div>
                     </a>
-                    <a class="nav-item nav-link " id="nav-about-tab " data-bs-toggle="tab " href="#nav-mon-4 " role="tab " aria-controls="nav-about " aria-selected="false ">
+                    <a class="nav-item nav-link " id="nav-about-tab " data-bs-toggle="tab " href="/Menu/Menu_Soda" role="tab " aria-controls="nav-about " aria-selected="false ">
                         <div><img src="~/content/icon/015-martini.png " alt=" " height="50 " height="50 "></div>
                     </a>
                 </div>
@@ -40,13 +43,14 @@
                     <div class="container ">
                         <div class="row ">
                             <!-- hinh 1 -->
+                            @foreach (var item in Model)
+                            {
                             <div class="col-md-3 col-sm-6 ">
                                 <div class="product-grid3 ">
                                     <div class="product-image3 ">
                                         <a href="# ">
-                                            <img class="pic-1 " src="~/content/image/png/hamburger2.png">
-                                            <img class="pic-2 " src="~/content/image/png/hamburger3.png">
-                                        </a>
+                                            <img class="pic-1 " src="@item.MENU_IMG">
+                                            <img class="pic-2 " src="@item.MENU_IMG">
                                         <ul class="social ">
                                             <li><a href="# "><i class="fas fa-cart-plus"></i></a></li>
                                             <li><a href="# "><i class="fas fa-info-circle"></i></a></li>
@@ -54,10 +58,9 @@
                                         <span class="product-new-label ">New</span>
                                     </div>
                                     <div class="product-content ">
-                                        <h3 class="title "><a href="# ">Men's Blazer</a></h3>
+                                        <h3 class="title "><a href="# ">@item.MENU_NAME</a></h3>
                                         <div class="price ">
-                                            $63.50
-                                            <span>$75.00</span>
+                                            @item.MENU_PRICE VNĐ
                                         </div>
                                         <ul class="rating ">
                                             <li class="fas fa-star "></li>
@@ -69,6 +72,9 @@
                                     </div>
                                 </div>
                             </div>
+                            }
+
+
                             <!-- hinh 1.// -->
                         </div>
                     </div>
@@ -77,7 +83,7 @@
         </div>
 
         <!-- Chuyển trang 1,2,3 -->
-        <nav aria-label="Page navigation example ">
+        @*<nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center ">
                 <li class="page-item ">
                     <a class="page-link " href="#" aria-label="Previous ">
@@ -95,6 +101,6 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav>*@
         <!-- Kết thúc chuyển trang    -->
         <hr>

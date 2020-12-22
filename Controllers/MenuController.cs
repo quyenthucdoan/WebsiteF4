@@ -12,11 +12,32 @@ namespace WebsiteF4.Controllers
         public IActionResult ShowMenu()
         {
             StoreContext sc = new StoreContext();
-            return View(sc.selectMenu());
+            return View(sc.selectMenu_Hamburger());
         }
-        public IActionResult lietKeSanPham()
+
+
+        public IActionResult Menu_Hamburger()
         {
-            return View();
+            StoreContext sc = new StoreContext();
+            return View(sc.selectMenu_Hamburger());
+        }
+
+        public IActionResult Menu_IceCream()
+        {
+            StoreContext sc = new StoreContext();
+            return View(sc.selectMenu_IceCream());
+        }
+
+        public IActionResult Menu_Rice()
+        {
+            StoreContext sc = new StoreContext();
+            return View(sc.selectMenu_Rice());
+        }
+
+        public IActionResult Menu_Soda()
+        {
+            StoreContext sc = new StoreContext();
+            return View(sc.selectMenu_Soda());
         }
     }
 }
