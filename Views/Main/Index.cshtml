@@ -1,0 +1,267 @@
+﻿<link rel="stylesheet" href="~/css/stylet.css">
+<link rel="stylesheet" href="~/css/style.css">  
+<link rel="stylesheet" href="~/css/main1.css">
+<link rel="stylesheet" href="~/css/feedback.css">
+
+
+<head>
+    <meta name="viewport" content="width=device width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="container-fluid navigation-bar">
+        <a class="navbar-brand" href="#">
+            <h4>Fassy<span>Kitchen</span></h4>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hello">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="hello">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link btn btn-outline-success btn-lg m-3 text-dark " type="button" href="#" style="font-family:'Comic Sans MS'">Menu</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-success btn-lg m-3 text-dark " type="button" href="#" style="font-family:'Comic Sans MS'">Categories</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-success btn-lg m-3 text-dark " type="button" href="#" style="font-family:'Comic Sans MS'">Order</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-success btn-lg m-3 text-dark " type="button" href="#" style="font-family:'Comic Sans MS'">Our story</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-success btn-lg m-3 text-dark " type="button" asp-controller="Account" asp-action="Index" style="font-family:'Comic Sans MS'">Login Admin</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" style=" height: 1000px !important;">
+        <!-- item1 active -->
+        <div class="carousel-item active">
+            <img src="/Content/Content/images/101868554_265752884696719_7834793406995539855_n.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+                <h2 class="display-3 text-dark text-left" style="font-family:'Comic Sans MS'">welcome to our restaurant!</h2>
+            </div>
+        </div>
+
+        <!-- item2 -->
+
+        <div class="carousel-item">
+            <img src="/Content/Content/images/photo-1449962887303-b4a91c7c560a.jpg" class="d-block w-100 h-50" alt="...">
+            <div class="carousel-caption" style="top: 50px; right: 40px;">
+                <h2 class="display-3 text-dark " style="font-family:'Comic Sans MS'">BEST SELLER</h2>
+                
+            <!-- hinh 1 -->
+                <div class="container" style="flex-direction:row; display: flex;">
+                    <div class="col-md-3 col-sm-6" style="margin:20px;">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="#">
+                                    <img class="pic-1" src="~/Content/Content/images/How-to-Reheat-a-Burger-CO342-FE-735x735.jpg">
+                                    <img class="pic-2" src="~/Content/Content/images/How-to-Reheat-a-Burger-CO342-FE-735x735.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                                <span class="product-new-label">New</span>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                <div class="price">
+                                    $63.50
+                                    <span>$75.00</span>
+                                </div>
+                                <ul class="rating">
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star disable"></li>
+                                    <li class="fa fa-star disable"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- hinh 2 -->
+                    <div class="col-md-3 col-sm-6" style="margin:20px;">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="#">
+                                    <img class="pic-1" src="~/Content/Content/images/How-to-Reheat-a-Burger-CO342-FE-735x735.jpg">
+                                    <img class="pic-2" src="~/Content/Content/images/How-to-Reheat-a-Burger-CO342-FE-735x735.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                                <span class="product-new-label">New</span>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                <div class="price">
+                                    $63.50
+                                    <span>$75.00</span>
+                                </div>
+                                <ul class="rating">
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star disable"></li>
+                                    <li class="fa fa-star disable"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- hinh 3 -->
+                    <div class="col-md-3 col-sm-6" style="margin:20px;">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="#">
+                                    <img class="pic-1" src="~/Content/Content/images/How-to-Reheat-a-Burger-CO342-FE-735x735.jpg">
+                                    <img class="pic-2" src="~/Content/Content/images/How-to-Reheat-a-Burger-CO342-FE-735x735.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                                <span class="product-new-label">New</span>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                <div class="price">
+                                    $63.50
+                                    <span>$75.00</span>
+                                </div>
+                                <ul class="rating">
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star"></li>
+                                    <li class="fa fa-star disable"></li>
+                                    <li class="fa fa-star disable"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- item3 -->
+        <div class="carousel-item">
+            <img src="/Content/Content/images/photo-1466781783364-36c955e42a7f.jpg" class="d-block w-100 " alt="...">
+            <div class="carousel-caption">
+
+                <ul class="row">
+                    
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team1.png" class="img-responsive" alt=""></figure>
+                            <h3><a href="#">Kappua </a></h3>
+                            <p>Freelance Web Developer</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
+                            <h3><a href="http://www.webcoderskull.com/">Manish </a></h3>
+                            <p>Freelance Web Developer</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <div class="cnt-block equal-hight" style="height: 349px;">
+                            <figure><img src="http://www.webcoderskull.com/img/team2.png" class="img-responsive" alt=""></figure>
+                            <h3><a href="http://www.webcoderskull.com/">Atul </a></h3>
+                            <p>Freelance Web Developer</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- control -->
+    <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <i style="font-size: 60px" class="fas fa-angle-double-left"></i>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <i style="font-size: 60px" class="fas fa-angle-double-right"></i>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+<!-- footer -->
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <p class="footer-company-name"><h3>Fassy<span>Kitchen</span></h3></p>
+
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+
+            <a href="#">Menu</a>
+
+            <a href="#">Category</a>
+
+            <a href="#">Order</a>
+
+            <a href="#">Calories</a>
+        </p>
+
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>KP6, phường Linh Trung</span> Trường ĐH CNTT, quận Thủ Đức, TP. Hồ Chí Minh</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:17521063@gm.uit.edu.vn">17521063@gm.uit.edu.vn</a></p>
+        </div>
+
+    </div>
+
+    
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the restaurant</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+    </div>
+
+</footer>
+

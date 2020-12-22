@@ -1,0 +1,56 @@
+﻿body {
+    /*padding: 0;
+    margin: 0;*/
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/Content/Content/images/brooke-lark-wMzx2nBdeng-unsplash.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+    background: #F7F8F1;
+    width: 900px;
+    height: 500px;
+    top: 100px;
+    left: 100px;
+    overflow: auto;
+}
+
+.btn {
+    background-color: #295637;
+    color: white;
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+.form-group {
+    flex-direction: row;
+}
+.form-group label {
+    font-family: 'Dancing Script', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 54px;
+    color: #398F53;
+}
+th {
+    font-family: Comic Sans MS, cursive, sans-serif;
+    font-size: 20px;
+    width: 300px;
+    text-align:center;
+}
+tr {
+    width: 700px;
+    height: 30px;
+}
+table {
+    margin:30px;
+}
