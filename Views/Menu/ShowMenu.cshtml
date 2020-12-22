@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "";
+}
+
+@model IEnumerable<WebsiteF4.Models.Menu>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>id</td>
+        <td>id</td>
+        <td>id</td>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.MENU_ID</td>
+            <td>@item.MENU_NAME</td>
+            <td>@item.MENU_SIZE</td>
+            <td>@item.MENU_PRICE</td>
+        </tr>
+    }
+</table>
