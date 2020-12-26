@@ -12,14 +12,14 @@ namespace WebsiteF4.Controllers
         public IActionResult ShowMenu()
         {
             StoreContext sc = new StoreContext();
-            return View(sc.selectMenu_Hamburger());
+            return View(sc.selectMenu_FastFood());
         }
 
 
-        public IActionResult Menu_Hamburger()
+        public IActionResult Menu_FastFood()
         {
             StoreContext sc = new StoreContext();
-            return View(sc.selectMenu_Hamburger());
+            return View(sc.selectMenu_FastFood());
         }
 
         public IActionResult Menu_IceCream()
@@ -28,7 +28,7 @@ namespace WebsiteF4.Controllers
             return View(sc.selectMenu_IceCream());
         }
 
-        public IActionResult Menu_Rice()
+        public IActionResult Menu_Fruit()
         {
             StoreContext sc = new StoreContext();
             return View(sc.selectMenu_Rice());
@@ -38,6 +38,13 @@ namespace WebsiteF4.Controllers
         {
             StoreContext sc = new StoreContext();
             return View(sc.selectMenu_Soda());
+        }
+
+        public IActionResult Detail_Each_Item_In_Menu(int id)
+        {
+            StoreContext sc = new StoreContext();
+
+            return View(sc.detail_menu(id));
         }
     }
 }

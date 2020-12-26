@@ -1,0 +1,71 @@
+﻿html {
+    background: #f4f4f4;
+}
+
+.container {
+    height: 90px;
+    /* border: 1px solid black; */
+    /* position: absolute;
+  top: 0;
+  right: 0; */
+    background-color: #fff;
+    display: inline;
+}
+
+.menu {
+    font-size: 30px;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 53.07px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.admin-logo {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* Body */
+
+.left-side {
+    width: 60%;
+    height: 32rem;
+    border: 1px solid black;
+    background: #5134c5;
+    margin-left: 20px;
+}
+
+.right-side {
+    width: 40%;
+}
+
+    .right-side ul li {
+        margin-left: 15rem;
+        border: 1px solid black;
+        width: 200px;
+        height: 50px;
+        margin-bottom: 25px;
+        background: #c4c4c4;
+    }
+
+.container-body {
+    background: #f7f7f7;
+    padding-top: 40px;
+}
+
+.button-container {
+    margin-left: 15rem;
+    width: 200px;
+    font-family: Reem Kufi;
+    border-radius: 20px;
+}
+
+.button {
+    background: #abbeab;
+    margin-left: 10px;
+    border-radius: 20px;
+}

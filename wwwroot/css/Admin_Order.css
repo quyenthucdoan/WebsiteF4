@@ -1,0 +1,62 @@
+﻿.container {
+    height: 90px;
+    /* border: 1px solid black; */
+    /* position: absolute;
+  top: 0;
+  right: 0; */
+    background-color: #fff;
+    display: inline;
+}
+
+.menu {
+    font-size: 30px;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 53.07px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.admin-logo {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+/* Body */
+
+.table-container {
+    border: 1px solid black;
+    border-radius: 2%;
+    width: 30em;
+    height: 35em;
+}
+
+.box-container {
+    border: 1px solid black;
+    margin-top: 18px;
+    border-radius: 5%;
+    width: 80%;
+    margin-left: 10%;
+    height: 40%;
+}
+
+.box-name {
+    font-family: Prompt;
+    font-weight: 500;
+    font-size: 20px;
+    color: #838d9a;
+    margin-left: 30px;
+    letter-spacing: 0.02em;
+}
+
+.box-time {
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #758292;
+}

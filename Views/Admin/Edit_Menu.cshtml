@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebsiteF4.Models.Menu>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<h4>Menu</h4>
+<hr />
+@foreach(var item in Model)
+{ 
+<div class="row">
+    <div class="col-md-4">
+        <form action="Admin/Update_Menu" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label name="MENU_ID" class="control-label"></label>
+                <input name="MENU_ID" readonly value="@item.MENU_ID" />
+                <span name="MENU_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="MENU_NAME" class="control-label"></label>
+                <input name="MENU_NAME"value="@item.MENU_NAME" />
+                <span name="MENU_NAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="MENU_SIZE" class="control-label"></label>
+                <input name="MENU_SIZE"value="@item.MENU_SIZE"/>
+                <span name="MENU_SIZE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="MENU_PRICE" class="control-label"></label>
+                <input name="MENU_PRICE" value="@item.MENU_PRICE" />
+                <span name="MENU_PRICE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="CALORIES" class="control-label"></label>
+                <input name="CALORIES"value="@item.CALORIES" />
+                <span name="CALORIES" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="MENU_IMG" class="control-label"></label>
+                <input name="MENU_IMG"value="@item.MENU_IMG" />
+                <span name="MENU_IMG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="MENU_DESCRIPTION" class="control-label"></label>
+                <input name="MENU_DESCRIPTION"value="@item.MENU_DESCRIPTION"/>
+                <span name="MENU_DESCRIPTION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="MARK" class="control-label"></label>
+                <input name="MARK"value="@item.MARK" />
+                <span name="MARK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="CATE_ID" class="control-label"></label>
+                <input name="CATE_ID" value="@item.CATE_ID"/>
+                <span name="CATE_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+}
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
