@@ -1,5 +1,4 @@
-﻿
-.navigation-bar {
+﻿.navigation-bar {
     background-color: #ABBEAB;
 }
 
@@ -7,9 +6,11 @@ h4 {
     font-family: Comic Sans MS, cursive, sans-serif;
     font-weight: 600;
 }
-h4 span {
-    color:antiquewhite;
-}
+
+    h4 span {
+        color: antiquewhite;
+    }
+
 .btn {
     width: 130px;
     height: 50px;
@@ -38,10 +39,11 @@ body {
     box-sizing: border-box;
 }*/
 
-.navbar-expand-md{
-    padding:0;
-    margin:0;
+.navbar-expand-md {
+    padding: 0;
+    margin: 0;
 }
+
 .carousel-caption {
     position: absolute;
     top: 35%;
@@ -54,4 +56,3 @@ body {
     font-weight: 600;
     font-family: 'Cormorant', serif;
 }*/
-

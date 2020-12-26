@@ -1,0 +1,91 @@
+﻿@{
+
+    Layout = "_Admin_Design";
+}
+@model IEnumerable<WebsiteF4.Models.Menu>
+@*<link href="/css/Dashboard.css" rel="stylesheet" />
+    <link href="/css/Admin_Header.css" rel="stylesheet" />*@
+<link href="/css/Menu_Add.css" rel="stylesheet" />
+
+@Html.Partial("_Sidebar_Admin");
+
+<div class="container contact" style="right: 40px;">
+    <div class="row">
+        <form action="/Admin/MENU_ADD1">
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="fname">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" placeholder="Tên món" name="MENU_NAME" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="lname">Size</label>
+                        <select class="form-select w-auto" id="inputGroupSelect02" name="MENU_SIZE">
+                            <option selected>Choose...</option>
+                            <option value="1">S</option>
+                            <option value="2">M</option>
+                            <option value="3">L</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="price">Price</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="price" placeholder="Nhập giá món" name="MENU_PRICE">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="calories">Calories</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="calories" placeholder="Nhập calories" name="CALORIES">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="image">Image</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" id="image" placeholder="Hình" name="MENU_IMG">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="description">Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="3" name="MENU_DESCRIPTION"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="calories">Calories</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="CATE_ID" placeholder="Nhập calories" name="CATE_ID">
+                        </div>
+                    </div>
+                    <div class="form-inline" style="margin-left: 250px;">
+                        <div class="form-group">
+                            <input type="submit" value="Thêm" style="background-color: #ABBEAB;" class="btn  btn-lg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        @*<form action="/Admin/MENU_ADD1">
+            <input type="text" name="MENU_NAME" /><br><br>
+            <input type="text" name="MENU_SIZE" /><br><br>
+            <input type="text" name="MENU_PRICE" /><br><br>
+            <input type="text" name="CALORIES" /><br><br>
+            <input type="text" name="MENU_IMG" /><br><br>
+            <input type="text" name="MENU_DESCRIPTION" /><br><br>
+            <input type="text" name="CATE_ID" /><br><br>
+            <button type="submit">ADD</button>
+        </form>*@
+        <script>
+            function Thongbao()
+            {
+                window.onload = function () {
+                    alert("@ViewBag.ThongBao");
+                }
+            }
+        </script>
+    </div>
+</div>

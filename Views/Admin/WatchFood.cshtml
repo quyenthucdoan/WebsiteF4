@@ -1,0 +1,55 @@
+﻿@{
+
+    Layout = "_Admin_Design";
+}
+@model IEnumerable<WebsiteF4.Models.Menu>
+
+<link href="/css/WatchFood.css" rel="stylesheet" />
+@Html.Partial("_Sidebar_Admin");
+
+
+
+<div class="container content">
+    <table class="table table-bordered" border="1">
+        <thead class="thead ">
+            <tr>
+                <th> Name Food</th>
+                <th> Size</th>
+                <th> Price</th>
+                <th> Calories</th>
+                <th> Img</th>
+                <th> Description</th>
+                <th> Mark</th>
+                <th> Category</th>
+                <th> Action</th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@item.MENU_NAME</td>
+                    <td>(@item.MENU_SIZE)</td>
+                    <td>@item.MENU_PRICE</td>
+                    <td>@item.CALORIES</td>
+                    <td>@item.MENU_IMG</td>
+                    <td>@item.MENU_DESCRIPTION</td>
+                    <td>@item.MARK</td>
+                    <td>@item.CATE_ID</td>
+                    <td>
+                        <button class="btn btn-warning"><a href="/Admin/Edit_Menu/?id=@item.MENU_ID">Edit</a></button>
+                        <button class="btn btn-danger" onclick="thongbao()"><a href="/Admin/Detele_Menu?id=@item.MENU_ID">Delete</a></button>
+                    </td>
+                </tr>
+            </tbody>
+        }
+
+    </table>
+</div>
+
+<script>
+    function thongbao() {
+        alert("@ViewBag.thongbao");
+    }
+</script>
