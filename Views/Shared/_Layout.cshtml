@@ -4,7 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/css/css.css" >
     <link rel="stylesheet" href="~/css/stylet.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -12,9 +11,66 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="/css/chitietsanpham_Q.css">
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/brands.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/regular.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/solid.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/v4-shims.min.css">
 </head>
 <body>
+    <!--Nav header-->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" style="padding:0; margin-top:0;width:100%;">
+        <div class="container-fluid navigation-bar">
+            <a class="navbar-brand" href="#">
+                <h4 style="font-family: Comic Sans MS, cursive, sans-serif; font-weight: 600;">Fassy<span style="color: antiquewhite;">Kitchen</span></h4>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hello">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="hello">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link btn btn-lg m-3 text-dark " type="button" href="#" style="font-family: 'Comic Sans MS'; border-radius: 50px; border-color: #909971; background-color: #D8E1D8;">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-lg m-3 text-dark " type="button" href="#" style="font-family: 'Comic Sans MS'; border-radius: 50px; border-color: #909971; background-color: #D8E1D8;">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-lg m-3 text-dark " type="button" href="#" style="font-family: 'Comic Sans MS'; border-radius: 50px; border-color: #909971; background-color: #D8E1D8;">Order</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-lg m-3 text-dark " type="button" href="#" style="font-family: 'Comic Sans MS'; border-radius: 50px; border-color: #909971; background-color: #D8E1D8;">Our story</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-lg m-3 text-dark " type="button" asp-controller="Account" asp-action="Index" style="font-family: 'Comic Sans MS'; border-radius: 50px; border-color: #909971; background-color: #D8E1D8;">Login Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div>@RenderBody()</div>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-distributed" style="position: fixed; bottom: 0; width: 100%; height: 60px;">
+                <div class="footer-left">
+                    <p class="footer-company-name">
+                        <h3>Fassy<span>Kitchen</span></h3>
+                    </p>
+                </div>
+                <div class="footer-center">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>KP6, phường Linh Trung</span> Trường ĐH CNTT, quận Thủ Đức, TP. Hồ Chí Minh</p>
+                    </div>
+
+                </div>
+                <div class="footer-right">
+                    <div>
+                        <span><i class="fa fa-phone"></i>0909573431</span>
+                    </div>
+                    <div>
+                        <span><i class="fa fa-envelope"></i><a href="mailto:17521063@gm.uit.edu.vn">17521063@gm.uit.edu.vn</a></span>
+                    </div>
+                </div>
+
+            </div>
+    </footer>
 </body>
 </html>
 @RenderSection("Scripts", required: false)

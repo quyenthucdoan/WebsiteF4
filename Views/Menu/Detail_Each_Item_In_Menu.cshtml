@@ -1,116 +1,91 @@
-﻿@{ Layout = "navFooter";}
+﻿@{ Layout = "_Layout";
+}
 @model IEnumerable<WebsiteF4.Models.Menu>
 
-@{ var id_razor = "";
+@{
+    var id_razor = "";
     int soluong_razor = 1;
 }
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/chitietsanpham_Q.css">
-<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
-<link rel="stylesheet" href="fontawesome-free/css/brands.min.css">
-<link rel="stylesheet" href="fontawesome-free/css/fontawesome.min.css">
-<link rel="stylesheet" href="fontawesome-free/css/regular.min.css">
-<link rel="stylesheet" href="fontawesome-free/css/solid.min.css">
-<link rel="stylesheet" href="fontawesome-free/css/svg-with-js.min.css">
-<link rel="stylesheet" href="fontawesome-free/css/v4-shims.min.css">
-<link href="chitietsanpham.css">
 
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <aside class="col-sm-5 border-right">
-                    <article class="gallery-wrap">
-                        <div class="img-big-wrap">
-                            @foreach (var item in Model)
-                            {
-                                <figure class=" figure">
-                                    <img src="@item.MENU_IMG" class="figure-img img-fluid rounded " id="myImg" alt=" ">
-                                </figure>
-                            }
-                            <!-- The Modal -->
-                            <div id="myModal" class="modal">
-                                <!-- The Close Button -->
-                                <span class="close">&times;</span>
-                                <!-- Modal Content (The Image) -->
-                                <img class="modal-content" id="img01">
-                                <!-- Modal Caption (Image Text) -->
-                                <div id="caption"></div>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    @*<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>*@
+    <link href="~/css/chitietsanpham_Q.css">
+
+</head>
+<body>
+    <div class="container pt-3 my-3">
+        @foreach (var item in Model)
+        {
+            id_razor = item.MENU_ID;
+            <div class="card">
+                <div class="container-fliud">
+                    <div class="wrapper row">
+
+                        
+                        <div class="preview col-md-6">
+                            <!-- link hình ảnh -->
+                            <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="pic-1-tab" id="pic-1"><img src=@item.MENU_IMG /></div>
+                            <!-- link hình ảnh.// -->
+                        </div>
+                        <div class="details col-md-6">
+                            <h3 class="product-title">@item.MENU_NAME</h3>
+
+                            <h4 class="price">Price: <span>@item.MENU_PRICE</span></h4>
+                            <h4 class="price">Calo: <span>@item.CALORIES</span></h4>
+                            <div class="sizes">
+                                <span>Size:</span>
+                                <input type="radio" name="size" data-toggle="tooltip" title="small">s &nbsp;
+                                <input type="radio" name="size" data-toggle="tooltip" title="medium"> m &nbsp;
+                                <input type="radio" name="size" data-toggle="tooltip" title="large"> l &nbsp;
+                                <input type="radio" name="size" data-toggle="tooltip" title="xtra large"> xl &nbsp;
+                            </div>
+                            <div class="amount">
+                                <label for="amount">Số lượng: </label>
+                                <input type="number" id="amount" name="amount" min="1" size="4">
+                            </div>
+                            <script>
+                                    @soluong_razor = $('input').val();
+                            </script>
+                            <div class="action">
+                                <a href="/Order/Order1?id=@id_razor&soluong=@soluong_razor" class="btn btn-lg btn-warning text-uppercase "> Buy now </a>
+                                <a href="# " onclick="Add_Item()" class="btn btn-lg btn-outline-warning text-uppercase "> <i class="fas fa-shopping-cart "></i> Add</a>
                             </div>
                         </div>
-                        <!-- slider-product.// -->
-                        @*<div class="img-small-wrap ">
-                                <div class="item-gallery "> <img src="png/mi.png "> </div>
-                                <div class="item-gallery "> <img src="png/hotdog.png "> </div>
-                                <div class="item-gallery "> <img src="png/pizza.png "> </div>
-                                <div class="item-gallery "> <img src="png/hamburger3.png "> </div>
-                            </div>*@
-                        <!-- slider-nav.// -->
-                    </article>
-                    <!-- gallery-wrap .end// -->
-                </aside>
-                <aside class="col-sm-7 ">
-                    <article class="card-body p-5 ">
-                        @foreach (var item in Model)
-                        {
-
-                            id_razor = item.MENU_ID;
-                            <h3 class="title mb-3 ">@item.MENU_NAME</h3>
-
-                            <p class="price-detail ">
-                                <span class="price h3 text-warning ">
-                                    <span class="currency "></span><span class="num ">@item.MENU_PRICE</span><sup class="unity ">vnđ</sup>
-                                </span>
-                            </p>
-                            <!-- price-detail.// -->
-                            <dl class="item-description ">
-                                <dt>Description</dt>
-                                <dd>
-                                    <p>@item.MENU_DESCRIPTION</p>
-                                </dd>
-                            </dl>
-                            <dl class="item-calo ">
-                                <dt>Calo:</dt>
-                                <dd>@item.CALORIES</dd>
-                            </dl>
-                        }
-                        <hr>
-                        <div class="row ">
-                            <div class="col-sm-5 ">
-                                Số lượng:<br />
-                                <input id="soluong" type="number" value="1" />
-                            </div>
+                        <div class="p-lg-4"></div>
+                        <hr />
+                        <div class="pt-md-3">
+                            <p><strong>Mô tả:</strong></p>
+                            <p class="product-description"> @item.MENU_DESCRIPTION</p>
                         </div>
-                        <!-- row.// -->
-                        <hr>
-                        <a href="/Order/Order1?id=@id_razor&soluong=" class="btn btn-lg btn-success text-uppercase "> Buy now </a>
-                        <a href="# " onclick="Add_Item()" class="btn btn-lg btn-outline-success text-uppercase "> <i class="fas fa-shopping-cart "></i> Add</a>
-                     </article >
-                    <!-- card-body.// -->
-                </aside>
-                <!-- col.// -->
+                        <!-- .preview.// -->
+                        
+                    </div>
+                    <!-- .wrapper.// -->
+                </div>
+                <!-- container-fruit.// -->
+         
             </div>
-            <!-- row.// -->
-        </div>
-        <!-- card-body.// -->
-    </div>
-</div>
+        }
+            <!-- card.// -->
 
+
+        </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
 </html>
+
+
+
+
 
 <script>
     function Add_Item() {
-        var soluong = document.getElementById("soluong").value;
-        alert("Thêm thành công với số lượng: " + soluong);
-    }
+            var soluong_razor = document.getElementById("soluong").value;
+            alert("Thêm thành công với số lượng: " + soluong);
+        }
 </script>
